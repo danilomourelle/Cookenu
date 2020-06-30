@@ -1,4 +1,4 @@
-> Status do Projeto: Em Manutenção :warning:
+> Status do Projeto: Concluido :heavy_check_mark:
 ## Danilo Mourelle
 <p align="justify">Atualmente um desenvolverdor Web Fullstack (NodeJS), tenho 3 anos de experiência em programação de robôs industriais, onde desenvolvi habilidade na área de programação de linguagens de alto nível e lógica de programação. Também fiz parte, por 4 anos, de um grupo de pesquisa científica em sistemas neurais com foco em memória, aprendizado e Doença de Alzheimer onde obtive familiaridade com documentações em lingua inglesa e a repetibilidade de protocolos pré-estabelecidos.</p>
 
@@ -125,7 +125,7 @@ Você poderá utilizar os endpoints através de um cliente HTTP (ex. [Postman](h
 * [Eloísa Fagundes](https://github.com/EloisaFagundes)
 
 ### ADICIONAL
-## Querys realizadas paras as criações de tabelas utilizando o MySQL Workbench
+#### Querys realizadas paras as criações de tabelas utilizando o MySQL Workbench
 
 **Tabela Usuário**
 

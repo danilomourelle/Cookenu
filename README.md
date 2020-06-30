@@ -30,7 +30,7 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 
 #### Escopo do Projeto
 
-<p align="justify">De manhã, você acordou, tomou uma bela xícara de café, verificou sua caixa de email e viu que tinha mais uma proposta de <em>Freela</em>. <em>Freela</em> vem de <em>Freelancer</em>, que é um trabalhador autônomo que sempre trabalha em projetos diferentes. Dessa vez, um cliente deseja te pagar muito bem para implementar o <bold>Cookenu</bold>.
+<p align="justify">De manhã, você acordou, tomou uma bela xícara de café, verificou sua caixa de email e viu que tinha mais uma proposta de <em>Freela</em>. <em>Freela</em> vem de <em>Freelancer</em>, que é um trabalhador autônomo que sempre trabalha em projetos diferentes. Dessa vez, um cliente deseja te pagar muito bem para implementar o <strong>Cookenu</strong>.
 
 </p>
 
@@ -43,10 +43,10 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 2. **Login:**
     - Como o projeto está no início, o usuário só precisa informar: o id, e-mail, nome a sua senha para realizar o cadastro. A senha tem uma regra: ela deve conter, no mínimo, 6 carácteres.
     
-3. **Informações do próprio perfil**
+3. **Informações do próprio perfil:**
     - A partir do token de autenticação fornecido no login, o usuário deve ser capaz de ver as suas informações não sensíveis salvas no banco (vulgo, id e email)
     
-4. **Criar receitas**
+4. **Criar receitas:**
     - O usuário deve poder criar uma receita. A receita deve ter os seguintes atributos: título, descrição/modo de preparo e data de criação
    
 5. **Seguir usuário:**
@@ -67,50 +67,61 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 * Node.js
 * MVC
 * Programação Orientada a Objeto
+* MySQL
 * Postman
 
 ### O que a plataforma é capaz de fazer :checkered_flag:
 
-:trophy: Simular o funcionamento de um aplicativo mensageiro de forma responsiva para Browser e Mobile 
+:trophy: Fornecer uma aplicação backend para um sistema de rede social voltada para o ambiente culinário 
 
-:trophy: Renderizar condicionalmente o bloco de mensagem de acordo com o remetende da mensagem ("eu")
+:trophy: Coletar, verificar, armazenar os dados em banco de dados próprio para o sistem
+
+:trophy: Criar, ler, atualizar e deletar (CRUD) dados da aplicação.
 
 ### Linguagens e libs utilizadas :books:
 
 - [Typescript](https://www.typescriptlang.org/docs/home.html): versão 3.8.3
-- [bcryptjs](https://styled-components.com/): versão 5.0.1
-- [jsonwebtoken]
-- knex
-- uuid
-- dotenv
-- express
-- mysql
--
+- [bcryptjs](https://styled-components.com/): versão 5.0.1 @types/2.4.2
+- [dotenv](https://github.com/motdotla/dotenv): versão 8.2.0
+- [express](https://expressjs.com/): versão 4.17.0 @types/4.17.0
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken): versão 8.5.1 @types/8.3.9 
+- [knex](http://knexjs.org/): versão 0.21.1 @types/0.16.1
+- [moment](https://momentjs.com/): versão 2.25.3 
+- [mysql](https://github.com/mysqljs/mysql): versão 2.18.1
+- [uuid](https://github.com/uuidjs/uuid): versão 8.0.0 @types/7.0.3
 
 ### Como rodar a aplicação :arrow_forward:
 
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/danilomourelle/Whats4.git
+git clone https://github.com/danilomourelle/Cookenu.git
 ```
 Navegue para dentro da raiz do projeto
 ```
-cd Whats4
+cd Cookenu
 ```
 Instale as dependências
 ```
 npm i
 ```
+Crie um arquivo __.env__ com as configurções do seu bando de dados (preferencialmente MySQL, caso deseje utilizar outro, adaptações no código e dependências serão necessárias)
+```
+DB_HOST = seu_endereço_host
+DB_USER = seu_usuário
+DB_PASSWORD = sua_sehna
+DB_DATABASE_NAME = seu_banco_de_dados
+JWT_KEY = chave_para_jwt
+JWT_EXPIRE_TIME = tempo_expiração (exemplo: 15 minutes)
+BCRYPT_COST = cost_encriptação (idealmente um valor minimo de 12)
+```
 Execute a aplicação
 ```
 npm start
 ```
-Você poderá acessar a aplicação em [localhost:3000](http:localhost:3000)
+Você poderá utilizar os endpoints através de um client HTTP (ex. Postman) tendo o endereço [localhost:3003](http:localhost:3003) como URL base para as requisições. Para informações individuais de cada endpoint coferir a [documentação]()
 
-**Projeto inicialmente desenvolvido em 14/02/2020 [neste Repo](https://github.com/future4code/sagan-whats4-grupo1) em parceria com:**
-* [Henrique Mendes](https://github.com/hdmendes)
+**Projeto inicialmente desenvolvido em 18/05/2020 [neste Repo](https://github.com/future4code/sagan-Cookenu-grupo1) em parceria com:**
+* [Eloísa Fagundes](https://github.com/EloisaFagundes)
 
-### RESULTADO FINAL
-[Site do projeto](http://danilomourelle-whats4.surge.sh)
 

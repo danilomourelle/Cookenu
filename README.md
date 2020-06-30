@@ -74,7 +74,7 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 
 :trophy: Fornecer uma aplicação backend para um sistema de rede social voltada para o ambiente culinário 
 
-:trophy: Coletar, verificar, armazenar os dados em banco de dados próprio para o sistem
+:trophy: Coletar, verificar, armazenar os dados em banco de dados próprio para o sistema
 
 :trophy: Criar, ler, atualizar e deletar (CRUD) dados da aplicação.
 
@@ -119,9 +119,46 @@ Execute a aplicação
 ```
 npm start
 ```
-Você poderá utilizar os endpoints através de um client HTTP (ex. Postman) tendo o endereço [localhost:3003](http:localhost:3003) como URL base para as requisições. Para informações individuais de cada endpoint coferir a [documentação]()
+Você poderá utilizar os endpoints através de um cliente HTTP (ex. [Postman](https://www.postman.com/product/api-client/)) tendo o endereço [localhost:3003](http:localhost:3003) como URL base para as requisições. Para informações de cada endpoint disponível conferir a [documentação](https://documenter.getpostman.com/view/10578976/T17CEqm8?version=latest)
 
 **Projeto inicialmente desenvolvido em 18/05/2020 [neste Repo](https://github.com/future4code/sagan-Cookenu-grupo1) em parceria com:**
 * [Eloísa Fagundes](https://github.com/EloisaFagundes)
+
+### ADICIONAL
+## Querys realizadas paras as criações de tabelas utilizando o MySQL Workbench
+
+**Tabela Usuário**
+
+```SQL
+CREATE TABLE User (
+  id varchar(255) PRIMARY KEY,
+  email varchar(255) UNIQUE NOT NULL,
+  password varchar(255) NOT NULL,
+  role varchar(255) NOT NULL DEFAULT 'normal',
+  name varchar(255) NOT NULL,
+)
+```
+
+**Tabela de Receitas**
+```SQL
+CREATE TABLE Recipes (
+  id varchar(255) PRIMARY KEY,
+  title varchar(255) UNIQUE NOT NULL,
+  description text NOT NULL,
+  created_at bigint(20) NOT NULL,
+  creator_user_id varchar(255) NOT NULL,
+  FOREIGN KEY (creator_user_id) REFERENCES User (id)
+)
+```
+
+**Tabela de Relação entre Usuários**
+```SQL
+CREATE TABLE UserFollowConnection (
+  followed_id varchar(255) NOT NULL,
+  follower_id varchar(255) NOT NULL,
+  FOREIGN KEY (followed_id) REFERENCES User (id),
+  FOREIGN KEY (follower_id) REFERENCES User (id)
+)
+```
 
 

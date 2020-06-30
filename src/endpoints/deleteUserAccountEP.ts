@@ -30,7 +30,7 @@ export const deleteUserAccountEP = async (req: Request, res: Response) => {
     await userDatabase.deleteAccount(userToDeleteId)
 
     res.status(200).send({
-      message: "Usuário obliterádo"
+      message: "Usuário apagado"
     })
   }
   catch (err) {

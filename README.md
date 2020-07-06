@@ -97,6 +97,7 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 - Integração com banco de dados externo e uso de variáveis de ambiente
 - Requisições HTTP / API Rest
 - Sistema de Autenticação e Autorização
+- Criptografia e geração de tokens de informações sensíveis
 
 ### Como rodar a aplicação :arrow_forward:
 

@@ -92,7 +92,6 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 
 ### Conhecimentos adquiridos durante o projeto :mortar_board:
 - Criação de projetos node com npm.init
-- Typescritp
 - Tranpilação de TS em JS
 - Integração com banco de dados externo e uso de variáveis de ambiente
 - Requisições HTTP / API Rest

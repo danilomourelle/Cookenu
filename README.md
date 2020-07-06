@@ -90,6 +90,14 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 - [mysql](https://github.com/mysqljs/mysql): versão 2.18.1
 - [uuid](https://github.com/uuidjs/uuid): versão 8.0.0 @types/7.0.3
 
+### Conhecimentos adquiridos durante o projeto :mortar_board:
+- Criação de projetos node com npm.init
+- Typescritp
+- Tranpilação de TS em JS
+- Integração com banco de dados externo e uso de variáveis de ambiente
+- Requisições HTTP / API Rest
+- Sistema de Autenticação e Autorização
+
 ### Como rodar a aplicação :arrow_forward:
 
 No terminal, clone o projeto: 
@@ -160,5 +168,3 @@ CREATE TABLE UserFollowConnection (
   FOREIGN KEY (follower_id) REFERENCES User (id)
 )
 ```
-
-

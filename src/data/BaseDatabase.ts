@@ -20,7 +20,7 @@ export abstract class BaseDatabase {
         return BaseDatabase.CONNECTION_KNEX
     }
 
-    public static async desconnectDB() {
+    public static async disconnectDB() {
         if (BaseDatabase.CONNECTION_KNEX !== null) {
            await BaseDatabase.CONNECTION_KNEX.destroy()
             BaseDatabase.CONNECTION_KNEX = null

@@ -37,6 +37,6 @@ export const signupEP = async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

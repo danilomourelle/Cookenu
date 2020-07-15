@@ -9,10 +9,10 @@ import { UserDatabase } from '../data/UserDatabase'
 
 export const createRecipeEP = async (req: Request, res: Response) => {
   try {
-    const retriviedData = new TokenManager()
+    const retrievedData = new TokenManager()
     .retrieveDataFromToken(req.headers.authorization as string)
 
-    const userData = await new UserDatabase().getUserById(retriviedData.id)
+    const userData = await new UserDatabase().getUserById(retrievedData.id)
 
     if(!userData){
       throw new Error('Faça login na sua conta antes de criar outras receitas')
@@ -23,7 +23,7 @@ export const createRecipeEP = async (req: Request, res: Response) => {
       title: req.body.title,
       description: req.body.description,
       createdAt: moment.now(),
-      creatorUserId: retriviedData.id
+      creatorUserId: retrievedData.id
     }
 
     if (!recipeInputs.title || !recipeInputs.description){
@@ -38,6 +38,6 @@ export const createRecipeEP = async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

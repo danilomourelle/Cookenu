@@ -6,14 +6,14 @@ import { RecipeDatabase } from '../data/RecipeDatabase'
 
 export const editeRecipeEP = async (req: Request, res: Response) => {
   try {
-    const retriviedData = new TokenManager()
+    const retrievedData = new TokenManager()
       .retrieveDataFromToken(req.headers.authorization as string)
 
-    if (retriviedData.role !== 'normal') {
+    if (retrievedData.role !== 'normal') {
       throw new Error('Apenas usuários comuns podem alterar receita')
     }
 
-    const userData = await new UserDatabase().getUserById(retriviedData.id)
+    const userData = await new UserDatabase().getUserById(retrievedData.id)
 
     if (!userData) {
       throw new Error('Faça login na sua conta antes de criar outras receitas')
@@ -53,6 +53,6 @@ export const editeRecipeEP = async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

@@ -1,9 +1,9 @@
-> Status do Projeto: Concluido :heavy_check_mark:
+> Status do Projeto: Concluído :heavy_check_mark:
 ## Danilo Mourelle
-<p align="justify">Atualmente um desenvolverdor Web Fullstack (NodeJS), tenho 3 anos de experiência em programação de robôs industriais, onde desenvolvi habilidade na área de programação de linguagens de alto nível e lógica de programação. Também fiz parte, por 4 anos, de um grupo de pesquisa científica em sistemas neurais com foco em memória, aprendizado e Doença de Alzheimer onde obtive familiaridade com documentações em lingua inglesa e a repetibilidade de protocolos pré-estabelecidos.</p>
+<p align="justify">Atualmente um desenvolvedor Web Fullstack (NodeJS), tenho 3 anos de experiência em programação de robôs industriais, onde desenvolvi habilidade na área de programação de linguagens de alto nível e lógica de programação. Também fiz parte, por 4 anos, de um grupo de pesquisa científica em sistemas neurais com foco em memória, aprendizado e Doença de Alzheimer onde obtive familiaridade com documentações em lingua inglesa e a repetibilidade de protocolos pré-estabelecidos.</p>
 
 **Canais de comunicação**:
-- [Linkedin](https://www.linkedin.com/in/danilomourelle/)
+- [LinkedIn](https://www.linkedin.com/in/danilomourelle/)
 - [Github](https://github.com/danilomourelle)
 - <danilomourelle@outlook.com>
 
@@ -92,8 +92,8 @@ Desenvolvimento de aplicações completas, incluindo frontend Web com React e ba
 
 ### Conhecimentos adquiridos durante o projeto :mortar_board:
 - Criação de projetos node com npm.init
-- Typescritp
-- Tranpilação de TS em JS
+- Typescript
+- Transpilação de TS em JS
 - Integração com banco de dados externo e uso de variáveis de ambiente
 - Requisições HTTP / API Rest
 - Sistema de Autenticação e Autorização
@@ -114,11 +114,11 @@ Instale as dependências
 ```
 npm i
 ```
-Crie um arquivo __.env__ com as configurções do seu bando de dados (preferencialmente MySQL, caso deseje utilizar outro, adaptações no código e dependências serão necessárias)
+Crie um arquivo __.env__ com as configurações do seu bando de dados (preferencialmente MySQL, caso deseje utilizar outro, adaptações no código e dependências serão necessárias)
 ```
 DB_HOST = seu_endereço_host
 DB_USER = seu_usuário
-DB_PASSWORD = sua_sehna
+DB_PASSWORD = sua_senha
 DB_DATABASE_NAME = seu_banco_de_dados
 JWT_KEY = chave_para_jwt
 JWT_EXPIRE_TIME = tempo_expiração (exemplo: 15 minutes)

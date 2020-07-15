@@ -8,11 +8,11 @@ export const getProfileByIdEP = async (req: Request, res: Response) => {
   try {
     const seekedId = req.params.id
 
-    const retriviedData = new TokenManager()
+    const retrievedData = new TokenManager()
     .retrieveDataFromToken(req.headers.authorization as string)
 
     const userDatabase = new UserDatabase()
-    const userData = await userDatabase.getUserById(retriviedData.id)
+    const userData = await userDatabase.getUserById(retrievedData.id)
 
     if(!userData){
       throw new Error('Faça login na sua conta antes de procurar outros usuários')
@@ -34,6 +34,6 @@ export const getProfileByIdEP = async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

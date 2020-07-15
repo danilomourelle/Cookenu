@@ -8,9 +8,9 @@ export const getRecipeFeedEP = async (req: Request, res: Response) => {
   try {
     const token = req.headers.authorization as string
 
-    const retriviedData = new TokenManager().retrieveDataFromToken(token)
+    const retrievedData = new TokenManager().retrieveDataFromToken(token)
 
-    const userData = await new UserDatabase().getUserById(retriviedData.id)
+    const userData = await new UserDatabase().getUserById(retrievedData.id)
 
     if (!userData) {
       throw new Error('Faça login na sua conta antes de criar outras receitas')
@@ -26,6 +26,6 @@ export const getRecipeFeedEP = async (req: Request, res: Response) => {
     res.status(400).send({ message1: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

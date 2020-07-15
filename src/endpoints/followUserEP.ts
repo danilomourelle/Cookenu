@@ -14,10 +14,10 @@ export const followUserEP = async (req: Request, res: Response) => {
       throw new Error('Dados inválidos')
     }
 
-    const followerRetriviedData = new TokenManager().retrieveDataFromToken(followerToken)
+    const followerRetrievedData = new TokenManager().retrieveDataFromToken(followerToken)
 
     const userDatabase = new UserDatabase()
-    const followerData = await userDatabase.getUserById(followerRetriviedData.id)
+    const followerData = await userDatabase.getUserById(followerRetrievedData.id)
     const followedData = await userDatabase.getUserById(followedId)
     
     if (!followerData || !followedData) {
@@ -34,6 +34,6 @@ export const followUserEP = async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

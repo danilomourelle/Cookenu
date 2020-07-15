@@ -7,11 +7,11 @@ import { UserConnectionDatabase } from '../data/UserConnectionDatabase'
 
 export const deleteUserAccountEP = async (req: Request, res: Response) => {
   try {
-    const retriviedData = new TokenManager()
+    const retrievedData = new TokenManager()
       .retrieveDataFromToken(req.headers.authorization as string)
 
     const userDatabase = new UserDatabase()
-    const userData = await userDatabase.getUserById(retriviedData.id)
+    const userData = await userDatabase.getUserById(retrievedData.id)
 
     if (!userData || userData.role !== 'admin') {
       throw new Error('Credenciais inválidas')
@@ -37,6 +37,6 @@ export const deleteUserAccountEP = async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message })
   }
   finally {
-    await BaseDatabase.desconnectDB()
+    await BaseDatabase.disconnectDB()
   }
 }

@@ -114,7 +114,7 @@ Instale as dependências
 ```
 npm i
 ```
-Crie um arquivo __.env__ com as configurações do seu bando de dados (preferencialmente MySQL, caso deseje utilizar outro, adaptações no código e dependências serão necessárias)
+Crie um arquivo __.env__ com as configurações do seu banco de dados (preferencialmente MySQL, caso deseje utilizar outro, adaptações no código e dependências serão necessárias)
 ```
 DB_HOST = seu_endereço_host
 DB_USER = seu_usuário
